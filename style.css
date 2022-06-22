@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Montserrat, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+img{
+    width: 20px;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+
+.nav-icon span{
+    font-family: Roboto Flex, sans-serif;
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-icon img{
+    width: 40px;
+    transform: rotate(-17deg) translateX(5px);
+}
+
+.hamburger{
+    display: none;
+}
+
+.navlinks-container a{
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+} 
+
+.navlinks-container a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: "333";
+    transition: transform 0.3 ease-out;
+}
+
+.navlinks-container a:hover::after{
+    transform: scaleX(1);
+}
+
+.nav-authentication{
+    margin-left: auto;
+}
+
+/* bouton sign in et sign up */
+.signs-btn button{
+    font-family: Roboto Flex, sans-serif;
+    font-size: 16px;
+    min-width: 90px;
+    padding: 10px 15px;
+    margin: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.signs-btn button:nth-child(2){
+    border: none;
+    background: #92c3eeb7;
+}
+
+.user-toggler{
+    display: none;
+}
